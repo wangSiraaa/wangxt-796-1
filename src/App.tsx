@@ -29,11 +29,11 @@ const RoleSelector: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-museum-300 transition-all"
+          className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-museum-300 transition-all"
         >
           <CurrentIcon className="w-4 h-4 text-museum-600" />
           <span className="text-sm font-medium text-gray-700">{currentRole.label}</span>
@@ -46,14 +46,14 @@ const RoleSelector: React.FC = () => {
               className="fixed inset-0 z-40" 
               onClick={() => setIsOpen(false)}
             />
-            <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-200 py-1 z-50">
+            <div className="absolute right-0 mt-2 w-44 sm:w-48 bg-white rounded-xl shadow-xl border border-gray-200 py-1 z-50">
               {roles.map(role => {
                 const Icon = role.icon;
                 return (
                   <button
                     key={role.value}
                     onClick={() => handleRoleChange(role.value, role.path)}
-                    className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                    className={`w-full flex items-center gap-3 px-3 py-2 sm:px-4 sm:py-2.5 text-sm transition-colors ${
                       currentRole.value === role.value
                         ? 'bg-museum-50 text-museum-700'
                         : 'text-gray-600 hover:bg-gray-50'

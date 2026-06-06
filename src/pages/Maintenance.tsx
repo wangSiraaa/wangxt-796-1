@@ -102,27 +102,27 @@ export const MaintenancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
+                <Wrench className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900 font-serif">设备维护</h1>
-                <p className="text-sm text-gray-500">维修队列 · 语种包管理 · 电量监控</p>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900 font-serif">设备维护</h1>
+                <p className="text-xs sm:text-sm text-gray-500">维修队列 · 语种包管理 · 电量监控</p>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-          <div className="bg-white rounded-xl p-4 border border-gray-200">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div className="bg-white rounded-xl p-3 sm:p-4 border border-gray-200">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-gray-600" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
               </div>
               <div>
                 <p className="text-xs text-gray-500">设备总数</p>
@@ -130,7 +130,7 @@ export const MaintenancePage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-red-200">
+          <div className="bg-white rounded-xl p-3 sm:p-4 border border-red-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="w-5 h-5 text-red-600" />
@@ -141,7 +141,7 @@ export const MaintenancePage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-amber-200">
+          <div className="bg-white rounded-xl p-3 sm:p-4 border border-amber-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-amber-600" />
@@ -152,7 +152,7 @@ export const MaintenancePage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-red-200">
+          <div className="bg-white rounded-xl p-3 sm:p-4 border border-red-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="w-5 h-5 text-red-600" />
@@ -163,7 +163,7 @@ export const MaintenancePage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-orange-200">
+          <div className="bg-white rounded-xl p-3 sm:p-4 border border-orange-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                 <Download className="w-5 h-5 text-orange-600" />
@@ -177,34 +177,34 @@ export const MaintenancePage: React.FC = () => {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4 font-serif">维修队列</h2>
+          <h2 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4 font-serif">维修队列</h2>
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">维修编号</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">设备</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">问题描述</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">状态</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">负责人</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">操作</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">维修编号</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">设备</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">问题描述</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">状态</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">负责人</th>
+                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-semibold text-gray-500 uppercase">操作</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   {state.repairs.map(repair => (
                     <tr key={repair.id} className="hover:bg-gray-50">
-                      <td className="px-4 py-3 text-sm font-medium text-gray-900">{repair.id}</td>
-                      <td className="px-4 py-3 text-sm text-gray-600">{repair.deviceId}</td>
-                      <td className="px-4 py-3 text-sm text-gray-600">{repair.issue}</td>
+                      <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm font-medium text-gray-900">{repair.id}</td>
+                      <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-600">{repair.deviceId}</td>
+                      <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-600">{repair.issue}</td>
                       <td className="px-4 py-3"><StatusBadge status={repair.status} /></td>
-                      <td className="px-4 py-3 text-sm text-gray-600">{repair.assignee || '-'}</td>
+                      <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-600">{repair.assignee || '-'}</td>
                       <td className="px-4 py-3">
                         <div className="flex gap-2">
                           {repair.status === 'pending' && (
                             <button
                               onClick={() => handleStartRepair(repair.id)}
-                              className="px-3 py-1.5 text-xs font-medium text-white bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors flex items-center gap-1"
+                              className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-medium text-white bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors flex items-center gap-1"
                             >
                               <Wrench className="w-3 h-3" />
                               开始维修
@@ -213,7 +213,7 @@ export const MaintenancePage: React.FC = () => {
                           {repair.status === 'repairing' && (
                             <button
                               onClick={() => handleCompleteRepair(repair.id)}
-                              className="px-3 py-1.5 text-xs font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors flex items-center gap-1"
+                              className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors flex items-center gap-1"
                             >
                               <CheckCircle className="w-3 h-3" />
                               完成维修
@@ -233,7 +233,7 @@ export const MaintenancePage: React.FC = () => {
         </div>
 
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-900 font-serif">设备列表</h2>
+          <h2 className="text-base sm:text-lg font-bold text-gray-900 font-serif">设备列表</h2>
           <div className="flex items-center gap-2">
             <Filter className="w-4 h-4 text-gray-400" />
             <select
@@ -248,7 +248,7 @@ export const MaintenancePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
           {filteredDevices.map(device => (
             <div key={device.id} className="relative">
               <DeviceCard device={device} onView={setSelectedDevice} />
@@ -273,9 +273,9 @@ export const MaintenancePage: React.FC = () => {
               className="fixed inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setSelectedDevice(null)}
             />
-            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6">
+            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg p-4 sm:p-6 m-2 sm:m-0">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-gray-900 font-serif">{selectedDevice.id} 详情</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-serif">{selectedDevice.id} 详情</h3>
                 <button
                   onClick={() => setSelectedDevice(null)}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -286,8 +286,8 @@ export const MaintenancePage: React.FC = () => {
                 </button>
               </div>
 
-              <div className="space-y-5">
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+              <div className="space-y-4 sm:space-y-5">
+                <div className="flex items-center justify-between p-3 sm:p-4 bg-gray-50 rounded-xl">
                   <span className="text-sm text-gray-500">状态</span>
                   <StatusBadge status={selectedDevice.status} />
                 </div>
@@ -307,7 +307,7 @@ export const MaintenancePage: React.FC = () => {
                 </div>
 
                 {selectedDevice.damageNote && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                  <div className="p-3 sm:p-4 bg-red-50 border border-red-200 rounded-xl">
                     <p className="text-xs font-medium text-red-700 mb-1">损坏备注</p>
                     <p className="text-sm text-red-600">{selectedDevice.damageNote}</p>
                   </div>

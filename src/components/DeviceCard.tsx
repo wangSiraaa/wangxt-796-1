@@ -40,7 +40,7 @@ export const DeviceCard: React.FC<DeviceCardProps> = ({
           : 'border-red-200'
       }`}
     >
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className={`p-2.5 rounded-xl ${
@@ -49,7 +49,7 @@ export const DeviceCard: React.FC<DeviceCardProps> = ({
               device.status === 'maintenance' ? 'bg-amber-100' :
               'bg-red-100'
             }`}>
-              <Smartphone className={`w-6 h-6 ${
+              <Smartphone className={`w-5 h-5 sm:w-6 sm:h-6 ${
                 device.status === 'available' ? 'text-emerald-600' :
                 device.status === 'rented' ? 'text-blue-600' :
                 device.status === 'maintenance' ? 'text-amber-600' :
@@ -57,7 +57,7 @@ export const DeviceCard: React.FC<DeviceCardProps> = ({
               }`} />
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 text-lg">{device.id}</h4>
+              <h4 className="font-bold text-gray-900 text-base sm:text-lg">{device.id}</h4>
               <StatusBadge status={device.status} />
             </div>
           </div>
